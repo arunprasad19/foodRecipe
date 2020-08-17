@@ -12,10 +12,11 @@ var FoodSchema = new Schema({
     required: true
   },
    
-  foodRecipe:[{
-    type: String,  
+  ingredients:{
+
+    type: Array,
     required: false
-}],
+},
   });
   
   module.exports = mongoose.model('Food', FoodSchema);

@@ -4,6 +4,8 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const express  = require('express');
 const app = express();
+var fs = require("fs"); 
+var cors = require('cors');
 
 //Import Routes
 var index = require('./routes/index');
@@ -16,6 +18,7 @@ app.use(function(req, res, next) {
     // Website you wish to allow to connect
     var allowedOrigins = [
         "http://localhost:4200",
+        "http://127.0.0.1:4200"
     ];
 
     var origin = req.headers.origin;
